@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +641,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -667,15 +667,234 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6B-Ii-Mat">
+                                <rect key="frame" x="0.0" y="204" width="122" height="52"/>
+                                <buttonCell key="cell" type="square" title="AC" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="cLg-1s-RHY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="dnK-G7-qqE" id="Jcq-g0-ZCo"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dnK-G7-qqE">
+                                <rect key="frame" x="121" y="204" width="121" height="52"/>
+                                <buttonCell key="cell" type="square" title="+/-" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="Ajn-gn-hhm">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="Iyj-nM-GbX" id="xEK-9W-aTr"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iyj-nM-GbX">
+                                <rect key="frame" x="241" y="204" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="%" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="6GO-WI-xe6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="sXl-Lz-DYb" id="7jc-sG-OlS"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-Lz-DYb">
+                                <rect key="frame" x="360" y="204" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="/" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="2Wj-zD-voi">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operationPressed:" target="XfG-lQ-9wD" id="9CK-zg-g1Z"/>
+                                    <outlet property="nextKeyView" destination="vZG-Py-LX7" id="ljK-lS-iQp"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZG-Py-LX7">
+                                <rect key="frame" x="0.0" y="153" width="122" height="52"/>
+                                <buttonCell key="cell" type="square" title="7" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="jxw-An-3z5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="H1V-Mz-5hj"/>
+                                    <outlet property="nextKeyView" destination="caD-yo-YqW" id="uxu-0l-6pA"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caD-yo-YqW">
+                                <rect key="frame" x="121" y="153" width="121" height="52"/>
+                                <buttonCell key="cell" type="square" title="8" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="xK6-kU-mYP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="g5B-Gr-pAn"/>
+                                    <outlet property="nextKeyView" destination="1uI-jc-g1c" id="8uo-EP-Q8g"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uI-jc-g1c">
+                                <rect key="frame" x="241" y="153" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="9" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="3EF-h4-1Zi">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="wAi-gP-MoP"/>
+                                    <outlet property="nextKeyView" destination="LRM-CU-gyR" id="yZo-5r-g0u"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LRM-CU-gyR">
+                                <rect key="frame" x="360" y="153" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="*" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="Lww-nT-1LQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operationPressed:" target="XfG-lQ-9wD" id="Mk6-C9-Rso"/>
+                                    <outlet property="nextKeyView" destination="gV6-po-gJE" id="Jea-uf-4cE"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gV6-po-gJE">
+                                <rect key="frame" x="0.0" y="102" width="122" height="52"/>
+                                <buttonCell key="cell" type="square" title="4" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="luE-kb-qWz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="BTD-kJ-ltq"/>
+                                    <outlet property="nextKeyView" destination="hpK-1N-9xb" id="WPl-pi-RUK"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpK-1N-9xb">
+                                <rect key="frame" x="121" y="102" width="121" height="52"/>
+                                <buttonCell key="cell" type="square" title="5" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="SjS-it-EwV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="SJs-ne-brg"/>
+                                    <outlet property="nextKeyView" destination="Kig-R4-Jfo" id="t52-FF-LTN"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kig-R4-Jfo">
+                                <rect key="frame" x="241" y="102" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="6" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="IfE-hK-ScA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="RYS-Qd-f82"/>
+                                    <outlet property="nextKeyView" destination="RNe-1w-Mak" id="nzQ-Mr-qSW"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNe-1w-Mak">
+                                <rect key="frame" x="360" y="102" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="-" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="3di-7L-PAc">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operationPressed:" target="XfG-lQ-9wD" id="2BK-gZ-deb"/>
+                                    <outlet property="nextKeyView" destination="mmy-Jk-tkB" id="CCO-1o-tA7"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ia-ZW-6TI">
+                                <rect key="frame" x="121" y="51" width="121" height="52"/>
+                                <buttonCell key="cell" type="square" title="2" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="c8K-aM-tmL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="x0p-PB-dEf"/>
+                                    <outlet property="nextKeyView" destination="q1x-H6-U6Q" id="w14-fl-H6P"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1x-H6-U6Q">
+                                <rect key="frame" x="241" y="51" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="3" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="pHF-lU-tUV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="jhS-Jv-2gn"/>
+                                    <outlet property="nextKeyView" destination="iyD-xd-Btn" id="zH0-hh-D2C"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-xd-Btn">
+                                <rect key="frame" x="360" y="51" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="+" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="aSR-rN-bUr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operationPressed:" target="XfG-lQ-9wD" id="XQt-58-AYf"/>
+                                    <outlet property="nextKeyView" destination="eqJ-H8-GZB" id="Eea-Ql-phH"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-H8-GZB">
+                                <rect key="frame" x="0.0" y="0.0" width="242" height="52"/>
+                                <buttonCell key="cell" type="square" title="0" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="nXh-Qf-BsL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="4nE-VN-ATy"/>
+                                    <outlet property="nextKeyView" destination="Z1h-yR-b76" id="5Fd-2I-zal"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-yR-b76">
+                                <rect key="frame" x="241" y="0.0" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="." bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="otY-fx-gHU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="decimalPressed:" target="XfG-lQ-9wD" id="CTt-zo-Z1Q"/>
+                                    <outlet property="nextKeyView" destination="96K-ml-ktR" id="pOL-Gg-xrn"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="96K-ml-ktR">
+                                <rect key="frame" x="360" y="0.0" width="120" height="52"/>
+                                <buttonCell key="cell" type="square" title="=" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="h4a-f6-yVg">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="operationPressed:" target="XfG-lQ-9wD" id="l3i-g6-RYy"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmy-Jk-tkB">
+                                <rect key="frame" x="0.0" y="51" width="122" height="52"/>
+                                <buttonCell key="cell" type="square" title="1" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="ScS-dQ-mqk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="digitPressed:" target="XfG-lQ-9wD" id="r2d-GQ-pAM"/>
+                                    <outlet property="nextKeyView" destination="7Ia-ZW-6TI" id="0He-9V-6wR"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XN5-iZ-ko6">
+                                <rect key="frame" x="0.0" y="256" width="480" height="44"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" drawsBackground="YES" id="khs-lw-e1y">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="output" destination="XN5-iZ-ko6" id="Fv9-oB-RSo"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="vWT-8F-wt3"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="670"/>
         </scene>
     </scenes>
 </document>
