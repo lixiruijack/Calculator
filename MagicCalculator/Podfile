@@ -4,11 +4,11 @@
 # use_frameworks!
 
 target 'MagicCalculator' do
-
+pod 'Realm'
 end
 
 target 'MagicCalculatorTests' do
-
+pod 'Realm/Headers'
 end
 
 target 'MagicCalculatorUITests' do
