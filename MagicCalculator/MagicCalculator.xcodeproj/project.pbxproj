@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6FA686F51B4D4E7F26CB9D /* libPods-MagicCalculatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CEFB69051158953A0D2AEA /* libPods-MagicCalculatorTests.a */; };
+		B214983926D239272A9381FF /* libPods-MagicCalculator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2B40AB685298D8FC7C62B3 /* libPods-MagicCalculator.a */; };
 		CA4B59421C2BE0F5001982EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4B59411C2BE0F5001982EA /* AppDelegate.m */; };
 		CA4B59451C2BE0F5001982EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4B59441C2BE0F5001982EA /* main.m */; };
 		CA4B59481C2BE0F5001982EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4B59471C2BE0F5001982EA /* ViewController.m */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A2B40AB685298D8FC7C62B3 /* libPods-MagicCalculator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MagicCalculator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9552F4947CA9AD7FC020979A /* Pods-MagicCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicCalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicCalculatorTests/Pods-MagicCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3CEFB69051158953A0D2AEA /* libPods-MagicCalculatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MagicCalculatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4B593D1C2BE0F5001982EA /* MagicCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4B59401C2BE0F5001982EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA4B59411C2BE0F5001982EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,6 +57,9 @@
 		CA4B59641C2BE0F5001982EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA611351C57712E00B9BD27 /* CalculatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorModel.h; sourceTree = "<group>"; };
 		CAA611361C57712E00B9BD27 /* CalculatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorModel.m; sourceTree = "<group>"; };
+		D24A7734936DB1220100DDB2 /* Pods-MagicCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicCalculator/Pods-MagicCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		D3D3A32B9BCB90F570A4AC30 /* Pods-MagicCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicCalculator/Pods-MagicCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		DB6F31F5C909017BA1B877F4 /* Pods-MagicCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicCalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicCalculatorTests/Pods-MagicCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B214983926D239272A9381FF /* libPods-MagicCalculator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6FA686F51B4D4E7F26CB9D /* libPods-MagicCalculatorTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +89,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		428B4242597B68527A11220F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3D3A32B9BCB90F570A4AC30 /* Pods-MagicCalculator.debug.xcconfig */,
+				D24A7734936DB1220100DDB2 /* Pods-MagicCalculator.release.xcconfig */,
+				DB6F31F5C909017BA1B877F4 /* Pods-MagicCalculatorTests.debug.xcconfig */,
+				9552F4947CA9AD7FC020979A /* Pods-MagicCalculatorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6BB06BD6FAE70F95C23A61A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A2B40AB685298D8FC7C62B3 /* libPods-MagicCalculator.a */,
+				C3CEFB69051158953A0D2AEA /* libPods-MagicCalculatorTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA4B59341C2BE0F5001982EA = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +116,8 @@
 				CA4B59561C2BE0F5001982EA /* MagicCalculatorTests */,
 				CA4B59611C2BE0F5001982EA /* MagicCalculatorUITests */,
 				CA4B593E1C2BE0F5001982EA /* Products */,
+				428B4242597B68527A11220F /* Pods */,
+				6BB06BD6FAE70F95C23A61A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA4B59671C2BE0F5001982EA /* Build configuration list for PBXNativeTarget "MagicCalculator" */;
 			buildPhases = (
+				48CC989BD5764B1D4E0749DA /* Check Pods Manifest.lock */,
 				CA4B59391C2BE0F5001982EA /* Sources */,
 				CA4B593A1C2BE0F5001982EA /* Frameworks */,
 				CA4B593B1C2BE0F5001982EA /* Resources */,
+				4BDA80023A2C125EFF649BCB /* Embed Pods Frameworks */,
+				F31DF10CF9AA0B7A2382354B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA4B596A1C2BE0F5001982EA /* Build configuration list for PBXNativeTarget "MagicCalculatorTests" */;
 			buildPhases = (
+				0E90B27C0BF044975F4EE530 /* Check Pods Manifest.lock */,
 				CA4B594F1C2BE0F5001982EA /* Sources */,
 				CA4B59501C2BE0F5001982EA /* Frameworks */,
 				CA4B59511C2BE0F5001982EA /* Resources */,
+				E75CBFF97D580F4D2A1922D3 /* Embed Pods Frameworks */,
+				AC67AFA5632B9CAB1192EFD2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +303,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E90B27C0BF044975F4EE530 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48CC989BD5764B1D4E0749DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4BDA80023A2C125EFF649BCB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagicCalculator/Pods-MagicCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC67AFA5632B9CAB1192EFD2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagicCalculatorTests/Pods-MagicCalculatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E75CBFF97D580F4D2A1922D3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagicCalculatorTests/Pods-MagicCalculatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31DF10CF9AA0B7A2382354B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MagicCalculator/Pods-MagicCalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA4B59391C2BE0F5001982EA /* Sources */ = {
@@ -402,6 +533,7 @@
 		};
 		CA4B59681C2BE0F5001982EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D3A32B9BCB90F570A4AC30 /* Pods-MagicCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -414,6 +546,7 @@
 		};
 		CA4B59691C2BE0F5001982EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D24A7734936DB1220100DDB2 /* Pods-MagicCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -426,6 +559,7 @@
 		};
 		CA4B596B1C2BE0F5001982EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB6F31F5C909017BA1B877F4 /* Pods-MagicCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -439,6 +573,7 @@
 		};
 		CA4B596C1C2BE0F5001982EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9552F4947CA9AD7FC020979A /* Pods-MagicCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
